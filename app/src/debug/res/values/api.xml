@@ -1,0 +1,11 @@
+<resources>
+    <string name="mapbox_key" templateMergeStrategy="preserve" translatable="false">
+        pk.eyJ1IjoiZWxlY3RyaWNmZWVsIiwiYSI6ImNqZTAyamhqMDFkbjkycXFsaHZhNmJ4MXcifQ.X2AR22cKmvUHE-8BX2i66A
+    </string>
+    <string name="foursquare_id">
+        1PUHJBDHHQSQX0ZB2B0JJ5UHTI0X2XSOE5VCFDBPRC4K35D5
+    </string>
+    <string name="foursquare_secret">
+        JPG3OSMJ4YTLQGGDTQQNU0FIAAZKPAGCG0ILSCLR2L2KKRFS
+    </string>
+</resources>
