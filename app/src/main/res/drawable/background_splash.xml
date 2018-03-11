@@ -3,10 +3,15 @@
 
     <item android:drawable="@color/white" />
 
-    <item>
+    <item android:top="150dp">
         <bitmap
-            android:gravity="center"
-            android:src="@mipmap/ganomad" />
+            android:gravity="top"
+            android:src="@drawable/mapbook" />
     </item>
 
+    <item android:bottom="60dp">
+        <bitmap
+            android:gravity="bottom"
+            android:src="@drawable/ganomad" />
+    </item>
 </layer-list>

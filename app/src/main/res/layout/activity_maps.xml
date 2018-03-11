@@ -4,12 +4,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:elevation="15dp"
+        android:src="@drawable/mapbook" />
     <com.mapbox.mapboxsdk.maps.MapView
         android:id="@+id/mapView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        mapbox:mapbox_cameraTargetLat="40.73581"
-        mapbox:mapbox_cameraTargetLng="-73.99155"
+        mapbox:mapbox_cameraTargetLat="41.3851"
+        mapbox:mapbox_cameraTargetLng="2.1734"
         mapbox:mapbox_cameraZoom="11"
         mapbox:mapbox_styleUrl="mapbox://styles/mapbox/dark-v9" />
 
