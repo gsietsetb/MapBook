@@ -8,5 +8,6 @@ package com.electricfeel.gsierra.mapbook
 object Constants {
     val PERMISSION_LOCATION = 101
     val ZOOM_DEFAULT = 12.0
-
+    val BARCELONA_LATITUDE = 41.3851
+    val BARCELONA_LONGITUDE = 2.1734
 }

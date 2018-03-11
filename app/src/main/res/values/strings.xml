@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">MapBook</string>
     <string name="title_activity_maps">MapBook</string>
+    <string name="title_location_permission">Grant Location permission</string>
+    <string name="text_location_permission">If you want to get nearby food venues, please grant location permissions.</string>
+    <string name="ok">ok</string>
 </resources>
