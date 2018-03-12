@@ -1,7 +1,7 @@
 package com.electricfeel.gsierra.mapbook.model.api
 
-import com.electricfeel.gsierra.mapbook.Constants
 import com.electricfeel.gsierra.mapbook.model.data.foursquare.FoursquareJSON
+import com.electricfeel.gsierra.mapbook.utils.Constants
 import io.reactivex.Observable
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
