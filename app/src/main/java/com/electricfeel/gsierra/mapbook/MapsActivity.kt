@@ -125,8 +125,8 @@ class MapsActivity : AppCompatActivity() {
 //        venue_detail_book.setColorFilter(ContextCompat.getColor(this@MapsActivity, R.color.colorAccent), PorterDuff.Mode.MULTIPLY)
 
         /*Shows a toast*/
-        Toast.makeText(this@MapsActivity, "Congratulations! You just booked: " + marker.title, Toast.LENGTH_LONG).show()
-
+        Toast.makeText(this@MapsActivity, "Congratulations! You just booked: ${marker.snippet} Thanks a lot! ", Toast.LENGTH_LONG).show()
+        venue_detail_info.text = "✅ Booked! ${marker.snippet} \n Thanks a lot! "
         /*Shows the Cancel button*/
         venue_detail_cancel.visibility = View.VISIBLE
         venue_detail_book.setOnClickListener { cancelVenueBooking() }
@@ -142,7 +142,9 @@ class MapsActivity : AppCompatActivity() {
     private fun cancelVenueBooking() {
         /*Updates the AppSharedPrefs*/
         prefs.withBooking = false
+        venue_detail_book.animate().alpha(1.0f).duration = 2000
         venue_detail_overlap.visibility = View.GONE
+        venue_detail_cancel.visibility = View.GONE
         addVenuesToMap(map!!)
     }
 

@@ -43,7 +43,6 @@ class SplashActivity : Activity() {
                 /*Update AppSharedPreferences*/
                 prefs.lastLocationLatitude = lastLocation.latitude.toFloat()
                 prefs.lastLocationLongitude = lastLocation.longitude.toFloat()
-
             }
 
             override fun onLocationChanged(location: Location) {
