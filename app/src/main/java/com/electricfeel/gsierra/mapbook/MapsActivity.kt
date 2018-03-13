@@ -44,7 +44,7 @@ class MapsActivity : AppCompatActivity() {
         setContentView(R.layout.activity_maps)
 
         /**Foursquare data load*/
-        searchFoodNearby()
+        searchFoodNearby(null)
 
         /**Map Init*/
         mapView = findViewById<View>(R.id.mapView) as MapView
@@ -55,16 +55,25 @@ class MapsActivity : AppCompatActivity() {
             /*shows the map in case there is no bookings*/
             if (prefs.withBooking) showVenueDetails(mapboxMap, prefs.markerBooking)
             else addVenuesToMap(mapboxMap)
+
+            mapbook_logo.setOnClickListener { _ -> searchFoodNearby(mapboxMap.cameraPosition.target) }
         }
     }
 
-    private fun searchFoodNearby() {
-        val userLastLocation = "${prefs.lastLocationLatitude},${prefs.lastLocationLongitude}"
+    private fun positionToString(lat: Any, lon: Any): String {
+        return "$lat,$lon"
+    }
+
+    private fun searchFoodNearby(loc: LatLng?) {
+        val userLastLocation =
+                if (loc == null) positionToString(prefs.lastLocationLatitude, prefs.lastLocationLongitude)
+                else positionToString(loc.latitude, loc.longitude)
 
         disposable = foursquareAPI.getFoodNearby(getString(R.string.foursquare_id),
                 getString(R.string.foursquare_secret),
                 SimpleDateFormat("yyyyMMdd").format(Date()),
                 Constants.VENUE_FOOD_ID,
+                Constants.RADIUS_DEFAULT,
                 userLastLocation)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
@@ -122,7 +131,6 @@ class MapsActivity : AppCompatActivity() {
 
         /**Sets color tint (green)*/
         venue_detail_book.setColorFilter(Color.argb(255, 5, 255, 5))
-//        venue_detail_book.setColorFilter(ContextCompat.getColor(this@MapsActivity, R.color.colorAccent), PorterDuff.Mode.MULTIPLY)
 
         /*Shows a toast*/
         Toast.makeText(this@MapsActivity, "Congratulations! You just booked: ${marker.snippet} Thanks a lot! ", Toast.LENGTH_LONG).show()

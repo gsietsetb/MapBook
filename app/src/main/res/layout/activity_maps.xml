@@ -16,7 +16,7 @@
         mapbox:mapbox_styleUrl="mapbox://styles/mapbox/dark-v9">
 
         <ImageView
-            android:id="@+id/imageView"
+            android:id="@+id/mapbook_logo"
             android:layout_width="150dp"
             android:layout_height="44dp"
             android:layout_gravity="center_horizontal"

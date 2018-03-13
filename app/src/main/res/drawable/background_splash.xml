@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:drawable="@color/white" />
+    <item
+        android:width="700dp"
+        android:height="700dp"
+        android:drawable="@color/gray_transp" />
 
-    <item android:top="150dp">
+    <item android:top="390dp">
         <bitmap
             android:gravity="top"
             android:src="@drawable/mapbook" />
@@ -11,9 +14,9 @@
 
     <item
         android:height="40dp"
-        android:bottom="60dp">
+        android:top="100dp">
         <bitmap
-            android:gravity="bottom"
+            android:gravity="top"
             android:src="@drawable/ganomad" />
     </item>
 </layer-list>

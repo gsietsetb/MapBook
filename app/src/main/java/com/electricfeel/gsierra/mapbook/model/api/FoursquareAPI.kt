@@ -26,6 +26,7 @@ interface FoursquareAPI {
                       @Query("client_secret") clientSecret: String,
                       @Query("v") vDate: String,
                       @Query("categoryId") categoryId: String,
+                      @Query("radius") radius: Int,
                       @Query("ll") ll: String): Observable<FoursquareJSON>
 
     companion object {
